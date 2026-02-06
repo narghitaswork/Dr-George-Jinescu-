@@ -922,6 +922,13 @@ h1, h2, h3, h4 {
     .servicii-grid {
         grid-template-columns: 1fr;
     }
+   .motto-section {
+        height: 380px;
+    }
+
+    .motto-bg {
+        background-attachment: scroll;
+    }
 }
 
 /* ============ RESPONSIVE - SMALL MOBILE ============ */
