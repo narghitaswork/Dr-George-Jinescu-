@@ -50,15 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const target = document.querySelector(targetId);
             if (target) {
                 const navHeight = navbar ? navbar.offsetHeight : 0;
                 const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             revealElements.forEach(function(el) {
                 const elementTop = el.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                
+
                 if (elementTop < windowHeight - 100) {
                     el.classList.add('visible');
                 }
@@ -87,23 +87,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
-```
-
----
-
-**Gata!** Salvează-l în `js/main.js`.
-
----
-
-## **STRUCTURA FINALĂ:**
-```
-📁 Dr-George-Jinescu-
-├── 📄 index.html
-├── 📁 css
-│   └── 📄 style.css
-├── 📁 js
-│   └── 📄 main.js
-├── 📁 images
-│   └── (pozele doctorului)
-└── 📁 pages
-    └── (paginile individuale)
